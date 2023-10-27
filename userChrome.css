@@ -1,0 +1,120 @@
+#main-window {
+  background: transparent !important;
+}
+#main-window[macOSNativeFullscreen="true"] {
+  background-color: #28272f !important;
+}
+#unified-extensions-button {
+  display: none;
+}
+
+/* Tabs */
+.tab-background {
+  transition: background 0.2s linear !important;
+}
+.tab-background {
+  background-color: rgba(255,255,255,0.05) !important;
+}
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
+  background-color: rgba(255,255,255,0.13) !important;
+}
+.tabbrowser-tab[selected="true"] > .tab-stack > .tab-background {
+  background-color: rgba(82, 80, 102, 0.74) !important;
+  background-image: none !important;
+}
+.tabbrowser-tab[selected="true"]:hover > .tab-stack > .tab-background:not([selected="true"]) {
+  background-color: rgba(111, 109, 132, 0.74) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background:-moz-lwtheme-brighttext {
+  box-shadow: inset 0em -4em 0em var(--toolbar-bgcolor) !important;
+}
+#tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[beforeselected-visible]::after, #tabbrowser-tabs[movingtab] > .tabbrowser-tab[visuallyselected]::before, .tabbrowser-tab[visuallyselected]::after {
+  opacity: 0.6 !important;
+}
+
+/* Tab bar */
+#titlebar #TabsToolbar {
+	padding-top: 4px !important;
+  padding-bottom: 1px !important;
+	background: rgba(var(--accent-color), 1) !important;
+}
+
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+  border-left: 0 !important;
+}
+
+.tabbrowser-tab > .tab-stack > .tab-background {
+  border-color: rgba(0,0,0, 1) !important;
+}
+.tabbrowser-tab > .tab-stack > .tab-background:not([selected="true"]) {
+	transition: all 0.3s ease !important;
+}
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
+  border-color: #000 !important;
+  /* todo */
+}
+#tabs-newtab-button .toolbarbutton-icon {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#tabs-newtab-button:hover .toolbarbutton-icon {
+  background-color: rgba(130,130,130,0.5) !important;
+}
+
+#tabs-newtab-button:active .toolbarbutton-icon {
+  background-color: rgba(180,180,180,0.7) !important;
+  color: rgba(110,110,110,0.7) !important;
+}
+
+/* Bookmarks */
+#alltabs-popup menuitem[pending] {
+  background-color: rgba(80, 80, 80,0.3) !important;
+}
+:root[uidensity="compact"] #PersonalToolbar {
+  padding: 0 !important;
+}
+#PersonalToolbar {
+  background-color: var(--lwt-accent-color) !important;
+}
+.bookmark-item:hover, #PlacesChevron:hover > .toolbarbutton-icon {
+  background-color: rgba(100,100,100,0.5) !important;
+}
+
+/* Menu bar */
+#navigator-toolbox {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+#nav-bar:not([inFullscreen="true"]) > hbox, #nav-bar:not([inFullscreen="true"]) > toolbaritem, #nav-bar[inFullscreen="true"] > toolbarbutton {
+  background-color: rgba(11, 11, 20, 0.4) !important;
+}
+
+#nav-bar[inFullscreen="true"] > hbox, #nav-bar[inFullscreen="true"] > toolbaritem, #nav-bar[inFullscreen="true"] > toolbarbutton {
+  background-color: var(--lwt-accent-color) !important;
+}
+
+:root #nav-bar, #main-window:not([macOSNativeFullscreen="true"]) > body > #navigator-toolbox > #PersonalToolbar, #titlebar {
+  -moz-appearance: -moz-mac-source-list !important;
+  -moz-font-smoothing-background-color: -moz-mac-source-list !important;
+}
+
+/* Url bar */
+#urlbar-background
+{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+
+  padding: 1px !important;
+
+  background-color:rgb(46, 45, 53) !important;
+  box-shadow: inset 0px 0px 1px 0px #5b5862 !important;
+  border-color: #1a1a1a !important;
+}
+#urlbar-input { 
+  padding-left: 6px !important;
+}
+[aria-label="Aucun traqueur connu par Firefox n’a été détecté sur cette page."], #identity-box.extensionPage { 
+  display: none !important;
+}
